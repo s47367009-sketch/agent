@@ -7,8 +7,8 @@
 ## ⚡ نصب سریع
 
 ```bash
-# ۱) دریافت پروژه
-git clone https://github.com/s47367009-sketch/agent.git
+# ۱) دریافت پروژه (کد روی این برنچ است — حتماً با -b کلون کنید)
+git clone -b arena/01a0a42e-agent https://github.com/s47367009-sketch/agent.git
 cd agent
 
 # ۲) نصب کتابخانه‌ها (پایتون 3.9 به بالا لازم است)
@@ -21,10 +21,13 @@ python -m playwright install chromium
 python main.py
 ```
 
+💡 اگر `pip` یا `python` شناخته نشد:
+- **ویندوز:** به‌جای آن‌ها از `py -m pip` و `py` استفاده کنید
+- **لینوکس/مک:** از `pip3` و `python3` استفاده کنید
+- **لینوکس:** اگر خطای `tkinter` گرفتید → `sudo apt install python3-tk`
+
 پنجره‌ی برنامه باز می‌شود → یوزرنیم/پسورد اینستاگرام + پوشه‌ی دانلود را بدهید و
 **«▶️ شروع ایجنت»** را بزنید. تمام! 🎬
-
-> لینوکس: اگر خطای `tkinter` گرفتید → `sudo apt install python3-tk`
 
 ## ✨ امکانات
 
