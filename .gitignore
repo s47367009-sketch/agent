@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.sessions/
+downloads/
+*.mp4
+*.webm
+manifest.jsonl
+links.txt
