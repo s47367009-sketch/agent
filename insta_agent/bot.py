@@ -258,7 +258,7 @@ class ReelsBot(threading.Thread):
         self.log(f"📺 رفتن به ریلز — هدف: {self.target} ریل جدید. حالت فقط-تماشا فعال است 👁️")
         page.goto(REELS_HOME, wait_until="domcontentloaded", timeout=60000)
         self._dismiss_popups(page)
-        page.wait_for_timeout(2500)
+        page.wait_for_timeout(1800)
 
         seen: set[str] = set(self.manifest.seen_shortcodes) if self.manifest else set()
         if seen:
@@ -339,7 +339,7 @@ class ReelsBot(threading.Thread):
             except Exception:
                 pass
         try:
-            page.wait_for_timeout(random.randint(350, 800))
+            page.wait_for_timeout(random.randint(250, 450))
         except Exception:
             pass
 

@@ -28,7 +28,6 @@ class DownloadManager:
         self.manifest = manifest
         self.workers = max(1, workers)
         self.cookies_timeout = cookies_timeout
-
         self._cookies_ready = threading.Event()
         self._cookiefile: str | None = None
         self._threads: list[threading.Thread] = []
@@ -89,8 +88,9 @@ class DownloadManager:
             "noprogress": True,
             "retries": 3,
             "fragment_retries": 3,
-            "socket_timeout": 30,
-            "sleep_interval_requests": random.uniform(1.0, 2.5),
+            "concurrent_fragment_downloads": 4,  # دانلود موازی تکه‌ها برای سرعت بالاتر
+            "socket_timeout": 25,
+            "sleep_interval_requests": random.uniform(0.4, 1.0),
             "continuedl": True,
             "overwrites": False,
         }
